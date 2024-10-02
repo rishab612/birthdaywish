@@ -15,7 +15,7 @@ document.getElementById('birthdayForm').addEventListener('submit', function (e) 
 
     localStorage.setItem(cardId, JSON.stringify(cardData));
 
-    const cardLink = `${window.location.origin}/card.html?id=${cardId}`;
+    const cardLink = `${window.location.origin}/birthdaywish/card.html?id=${cardId}`;
 
     document.getElementById('result').style.display = 'block';
     document.getElementById('cardLink').value = cardLink;
