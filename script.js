@@ -2,14 +2,20 @@ document.getElementById('birthdayForm').addEventListener('submit', function (e) 
     e.preventDefault();
 
     const name = document.getElementById('name').value;
+    const birthdayPerson = document.getElementById('birthdayPerson').value;
     const age = document.getElementById('age').value;
     const message = document.getElementById('message').value;
+    const themeColor = document.getElementById('themeColor').value;  // Get the selected theme color
+    const textColor = document.getElementById('textColor').value;    // Get the selected text color
 
     // Create an object with the form data
     const cardData = {
         name: name,
+        birthdayPerson: birthdayPerson,
         age: age,
-        message: message
+        message: message,
+        themeColor: themeColor, // Save the selected color
+        textColor: textColor     // Save the selected text color
     };
 
     // Convert the object to a string and encode it in Base64
