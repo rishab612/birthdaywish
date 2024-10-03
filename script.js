@@ -5,7 +5,11 @@ document.getElementById('birthdayForm').addEventListener('submit', function (e) 
     const age = document.getElementById('age').value;
     const message = document.getElementById('message').value;
 
-    const cardLink = `${window.location.origin}/birthdaywish/card.html?name=${encodeURIComponent(name)}&age=${encodeURIComponent(age)}&message=${encodeURIComponent(message)}`;
+    // Encode the data to Base64
+    const cardData = { name, age, message };
+    const encodedData = btoa(JSON.stringify(cardData));  // Base64 encoding
+
+    const cardLink = `${window.location.origin}/birthdaywish/card.html?data=${encodedData}`;
 
     document.getElementById('result').style.display = 'block';
     document.getElementById('cardLink').value = cardLink;
